@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Word Impostor</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="selectWordContainer">
+        <label for="normalWord">The normal word (non-impostor):</label>
+        <input type="text" id="normalWord" name="normalWord">
+        <br>
+
+        <label for="impostorWord">The impostor word:</label>
+        <input type="text" id="impostorWord" name="impostorWord">
+
+        <button id="start" onclick="startGame()">Start</button>
+    </div>
+
+    <div id="playGameContainer" style="display: none;">
+        <div id="wordArea"></div>
+        <button id="innocentButton" onclick="showWord('normalWord')">Innocent</button>
+        <button id="impostorButton" onclick="showWord('impostorWord')">Impostor</button>
+    </div>
+</body>
+</html>

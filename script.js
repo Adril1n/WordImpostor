@@ -46,5 +46,5 @@ function showWord(elementId) {
         // void wordArea.offsetWidth;
         
         canPressAgain = true;
-    }, 2500)
+    }, 5000)
 }

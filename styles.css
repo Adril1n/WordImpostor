@@ -27,7 +27,7 @@ body
 {
     position: relative;
     z-index: 1;
-    
+
     display: block;
     max-width: 90vw;
     word-wrap: break-word;
@@ -73,7 +73,7 @@ body
   stroke-dasharray: 1;
   stroke-dashoffset: 0;
 
-  animation: border-countdown 2.5s linear forwards;
+  animation: border-countdown 5s linear forwards;
 
   /* start from top */
   transform: rotate(90deg);

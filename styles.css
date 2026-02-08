@@ -1,0 +1,15 @@
+#wordArea 
+{
+    font-size: 20rem;
+}
+
+div 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+input
+{
+    max-width: 50%;
+}

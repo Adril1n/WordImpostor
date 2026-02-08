@@ -14,7 +14,7 @@ function startGame() {
     }
 
     document.getElementById("selectWordContainer").style.display = 'none';
-    document.getElementById("playGameContainer").style.display = 'block';
+    document.getElementById("playGameContainer").style.display = 'flex';
 }
 
 var canPressAgain = true;

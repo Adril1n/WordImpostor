@@ -4,6 +4,15 @@ function startGame() {
 
     const startBtn = document.getElementById("start");
 
+    if (normalWord == "" || impostorWord == "")
+    {
+        startBtn.innerHTML = "Cannot be empty!";
+        setTimeout(() => {
+            startBtn.innerHTML = "Start";
+        }, 1500);
+        return;
+    }
+
     if (normalWord == impostorWord)
     {
         startBtn.innerHTML = "Use different words!";
@@ -28,9 +37,14 @@ function showWord(elementId) {
     const input = document.getElementById(elementId);
     const wordArea = document.getElementById("wordArea");
 
-    wordArea.innerHTML = input.value;
+    // wordArea.classList.add("show");
+    wordArea.style.display = "inline-grid";
+    document.getElementById("wordAreaText").innerHTML = input.value;
     setTimeout(() => {
-        wordArea.innerHTML = "";
+        wordArea.style.display = "none";
+        // wordArea.classList.remove("show");
+        // void wordArea.offsetWidth;
+        
         canPressAgain = true;
     }, 2500)
 }

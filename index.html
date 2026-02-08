@@ -11,17 +11,30 @@
     <div id="selectWordContainer">
         <label for="normalWord">The normal word (non-impostor):</label>
         <input type="text" id="normalWord" name="normalWord">
+        <br>
 
         <label for="impostorWord">The impostor word:</label>
         <input type="text" id="impostorWord" name="impostorWord">
+        <br>
 
         <button id="start" onclick="startGame()">Start</button>
     </div>
 
     <div id="playGameContainer" style="display: none;">
-        <div id="wordArea"></div>
-        <button id="innocentButton" onclick="showWord('normalWord')">Innocent</button>
-        <button id="impostorButton" onclick="showWord('impostorWord')">Impostor</button>
+        <div style="position: fixed;left: 15px;top: 15px;" onclick="
+            document.getElementById('selectWordContainer').style.display = 'flex';
+            document.getElementById('playGameContainer').style.display = 'none';"
+            ><-- Return</div>
+        <div style="flex-direction: row; justify-content: space-evenly;width: 100%;margin-bottom: 10%;margin-top: 5%;">
+            <button id="innocentButton" onclick="showWord('normalWord')">Innocent</button>
+            <button id="impostorButton" onclick="showWord('impostorWord')">Impostor</button>
+        </div>
+        <div id="wordArea">
+            <svg viewBox="0 0 100 100" class="border" preserveAspectRatio="none">
+                <rect x="0" y="0" width="100" height="100" rx="10" pathLength="1"/>
+              </svg>
+            <div id="wordAreaText"></div>
+        </div>
     </div>
 </body>
 </html>
